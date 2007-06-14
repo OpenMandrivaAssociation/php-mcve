@@ -6,7 +6,7 @@
 Summary:	libmonetra/libmcve interface for php
 Name:		php-%{modname}
 Version:	5.2.2
-Release:	%mkrel 4
+Release:	%mkrel 5
 Group:		Development/PHP
 License:	PHP License
 URL:		http://pecl.php.net/package/mcve
@@ -30,6 +30,15 @@ Softworks' solution to direct credit card processing for Unix.
 cp %{SOURCE1} %{inifile}
 
 %build
+export CFLAGS="%{optflags}"
+export CXXFLAGS="%{optflags}"
+export FFLAGS="%{optflags}"
+
+%if %mdkversion >= 200710
+export CFLAGS="$CFLAGS -fstack-protector"
+export CXXFLAGS="$CXXFLAGS -fstack-protector"
+export FFLAGS="$FFLAGS -fstack-protector"
+%endif
 
 phpize
 %configure2_5x --with-libdir=%{_lib} \
@@ -57,5 +66,3 @@ install -m0644 %{inifile} %{buildroot}%{_sysconfdir}/php.d/%{inifile}
 %doc package*.xml CREDITS tests *.php
 %config(noreplace) %attr(0644,root,root) %{_sysconfdir}/php.d/%{inifile}
 %attr(0755,root,root) %{_libdir}/php/extensions/%{soname}
-
-
