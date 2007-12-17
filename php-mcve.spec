@@ -15,7 +15,6 @@ Source1:	%{modname}.ini
 BuildRequires:	php-devel >= 3:5.2.0
 BuildRequires:	libmonetra-devel
 BuildRequires:	openssl-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 Interface the MCVE/Monetra API (libmonetra [formerly libmcve]), allowing you to
