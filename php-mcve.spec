@@ -5,15 +5,15 @@
 
 Summary:	libmonetra/libmcve interface for php
 Name:		php-%{modname}
-Version:	5.2.2
-Release:	%mkrel 9
+Version:	7.0.0
+Release:	%mkrel 1
 Group:		Development/PHP
 License:	PHP License
 URL:		http://pecl.php.net/package/mcve
-Source0:	http://pecl.php.net/get/%{modname}-%{version}.tar.bz2
+Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
 Source1:	%{modname}.ini
 BuildRequires:	php-devel >= 3:5.2.0
-BuildRequires:	libmonetra-devel
+BuildRequires:	libmonetra-devel >= 7.0.0
 BuildRequires:	openssl-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
