@@ -6,7 +6,7 @@
 Summary:	libmonetra/libmcve interface for php
 Name:		php-%{modname}
 Version:	7.0.3
-Release:	%mkrel 11
+Release:	%mkrel 12
 Group:		Development/PHP
 License:	PHP License
 URL:		http://pecl.php.net/package/mcve
