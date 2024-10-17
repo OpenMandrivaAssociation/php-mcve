@@ -9,7 +9,7 @@ Version:	7.0.3
 Release:	14
 Group:		Development/PHP
 License:	PHP License
-URL:		http://pecl.php.net/package/mcve
+URL:		https://pecl.php.net/package/mcve
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
 Source1:	%{modname}.ini
 Patch0:		mcve-7.0.3-php54x.diff
